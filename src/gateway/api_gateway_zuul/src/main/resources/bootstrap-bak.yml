@@ -1,0 +1,19 @@
+server:
+  port: 8111
+spring:
+  application:
+    name: api-gateway-zuul
+
+zuul:
+  routes:
+    eureka-consumer:
+      path: /eureka-consumer/**
+      serviceId: eureka-consumer
+    eureka-consumer-feign:
+          path: /eureka-consumer-feign/**
+          serviceId: eureka-consumer-feign
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:8090/eureka,http://eureka-bak:8091/eureka

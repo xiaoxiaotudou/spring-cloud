@@ -1,0 +1,11 @@
+server:
+  port: 8091
+eureka:
+  instance:
+    appname: eureka
+    hostname: eureka-bak
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://eureka:8090/eureka/
